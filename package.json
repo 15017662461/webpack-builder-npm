@@ -1,11 +1,15 @@
 {
-  "name": "builder-webpack",
-  "version": "1.0.0",
+  "name": "webpack-builder-npm",
+  "version": "1.1.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/_mocha",
-    "test-cover": "nyc .\\node_modules\\.bin\\_mocha"
+    "test-cover": "nyc .\\node_modules\\.bin\\_mocha",
+    "build": "webpack --config ./node_modules/webpack-builder-npm/lib/webpack.prod.js",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server --config ./node_modules/webpack-builder-npm/lib/webpack.dev.js --open",
+    "build:ssr": "webpack --config ./node_modules/webpack-builder-npm/lib/webpack.ssr.js"
   },
   "keywords": [],
   "author": "",
